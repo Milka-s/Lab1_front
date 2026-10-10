@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зворотній зв’язок — Розумники</title>
+</head>
+<body bgcolor="#f4f7f6" text="#333333">
+    <header>
+        <h1 id="logo" title="Логотип порталу">
+            <a href="index.html" title="Перейти на головну сторінку">🎓 Розумники</a>
+        </h1>
+        <nav>
+            <button type="button" onclick="goTo('index.html')">Головна</button>
+            <button type="button" onclick="goTo('courses.html')">Навчальні матеріали</button>
+            <button type="button" onclick="goTo('feedback.html')">Зворотній зв’язок</button>
+        </nav>
+        <p>
+            <button type="button" onclick="openCabinet()">Перейти у власний кабінет</button>
+            <button type="button" onclick="registerUser()">Зареєструватись</button>
+        </p>
+        <hr>
+    </header>
+    <main>
+        <h2>Зворотній зв’язок</h2>
+
+        <form onsubmit="submitForm(event)">
+            <fieldset>
+                <legend><strong>Персональна інформація</strong></legend>
+                <p>
+                    <label for="parentName">Прізвище та ім’я батьків:</label><br>
+                    <input type="text" id="parentName" size="40" required autofocus>
+                </p>
+                <p>
+                    <label for="email">E-mail батьків:</label><br>
+                    <input type="email" id="email" size="40" required>
+                </p>
+                <p>
+                    <label for="childAge">Вік дитини:</label><br>
+                    <input type="number" id="childAge" min="1" max="18" required>
+                </p>
+                <p>
+                    Стать дитини:<br>
+                    <label><input type="radio" name="gender" value="Хлопчик" required> Хлопчик</label>
+                    <label><input type="radio" name="gender" value="Дівчинка"> Дівчинка</label>
+                </p>
+            </fieldset>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
