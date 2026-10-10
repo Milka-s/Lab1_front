@@ -7,3 +7,8 @@ function openCabinet() {
 function registerUser() {
     alert('Реєстрація буде доступна найближчим часом.');
 }
+function submitForm(event) {
+    event.preventDefault();
+    alert('Дякуємо! Ваша інформація успішно надіслана.');
+    event.target.reset();
+}
