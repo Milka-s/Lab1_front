@@ -2,9 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наші курси — Розумники</title>
 </head>
-<body>
+<body bgcolor="#f4f7f6" text="#333333">
+    <header>
+        <h1 id="logo" title="Логотип порталу">
+            <a href="index.html" title="Перейти на головну сторінку">🎓 Розумники</a>
+        </h1>
+        <nav>
+            <button type="button" onclick="goTo('index.html')">Головна</button>
+            <button type="button" onclick="goTo('courses.html')">Навчальні матеріали</button>
+            <button type="button" onclick="goTo('feedback.html')">Зворотній зв’язок</button>
+        </nav>
+        <p>
+            <button type="button" onclick="openCabinet()">Перейти у власний кабінет</button>
+            <button type="button" onclick="registerUser()">Зареєструватись</button>
+        </p>
+        <hr>
+    </header>
+
+    <main>
+        <h2>Наші курси</h2>
+        <article>
+            <img src="https://placehold.co/300x160/4a90e2/ffffff.png?text=Математика" width="300" height="160" alt="Заставка курсу: Математика">
+            <h3>Весела лічба</h3>
+            <p><strong>Уроки:</strong> Цифри, Додавання, Віднімання</p>
+            <p><strong>Тип завдань:</strong> Ігрові квести</p>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
