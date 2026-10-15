@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<<html lang="uk">>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +15,23 @@
         }
     </style>
 </head>
-<body bgcolor="#f4f7f6" text="#333333">
-    <header>
+<body class="home">
+    <header id="main-header">
         <h1 id="logo" title="Логотип порталу">
             <a href="index.html" title="Перейти на головну сторінку">🎓 Розумники</a>
         </h1>
-        <nav>
+        <div class="auth">
             <button type="button" onclick="goTo ('index.html')">Головна</button>
             <button type="button" onclick="goTo ('courses.html')">Навчальні матеріали</button>
             <button type="button" onclick="goTo ('feedback.html')">Зворотній зв'язок'</button>
-        </nav>
-        <p>
+        </div>
+        <nav class="main-nav">
             <button type="button" onclick="openCabinet()">Перейти у власний кабінет</button>
-            <button type="button" onclick="registerUser()">Реєстрація</button>
-        </p>
-        <hr>
-    </header>
+            <button type="button" onclick="registerUser()">Зареєструватись</button>
+        </nav>
+</header>
     <main>
-        <section id="about">
+        <section id="about" class="block">
             <h2>Про наш портал</h2>
             <p><strong>Мета створення:</strong>Надання дітям доступного, цікавого та безпечного інтерактивного середовища для здобуття нових знань у формі гри.</p>
             <h3>Завдання для досягнення мети</h3>
@@ -42,13 +41,13 @@
                 <li>Забезпечення зручного інструменту для відстеження прогресу дитини батьками.</li>
             </ul>
         </section>
-        <section id="topics">
+        <section id="topics" class="block">
             <h3>Загальна інформація та теми</h3>
             <p>Наш портал охоплює базові предметні напрямки для дітей від 4 до 10 років.</p>
 
-            <table width="100%" border="1" cellpadding="10" cellspacing="0">
+            <table>
                 <caption>Теми для вивчення на порталі</caption>
-                <thead bgcolor="#e8f1fb">
+                <thead>
                     <tr>
                         <th align="left">Напрямок</th>
                         <th align="left">Теми для вивчення</th>
@@ -79,18 +78,17 @@
                 </tfoot>
             </table>
         </section>
-    </main>
-    <aside id="contacts">
-        <hr>
-        <h3>Контакти</h3>
-        <p><strong>Адреса:</strong> м. Київ, вул. Освіти, 15</p>
-        <p>
-            <strong>Телефони:</strong>
-            <a href="tel:+380441234567" title="Подзвонити за першим номером">+38 (044) 123-45-67</a>,
-            <a href="tel:+380979876543" title="Подзвонити за другим номером">+38 (097) 987-65-43</a>
-        </p>
-    </aside>
 
+        <aside id="contacts" class="block" tabindex="0">
+            <h3>Контакти</h3>
+            <p><strong>Адреса:</strong> м. Київ, вул. Освіти, 15</p>
+            <p>
+                <strong>Телефони:</strong>
+                <a href="tel:+380441234567" title="Подзвонити за першим номером">+38 (044) 123-45-67</a>,
+                <a href="tel:+380979876543" title="Подзвонити за другим номером">+38 (097) 987-65-43</a>
+            </p>
+        </aside>
+    </main>
 
 
     <script src="script.js"></script>

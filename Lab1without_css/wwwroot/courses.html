@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,55 +12,52 @@
         }
     </style>
 </head>
-<body bgcolor="#f4f7f6" text="#333333">
-    <header>
+<body class="courses">
+    <header id="main-header">
         <h1 id="logo" title="Логотип порталу">
             <a href="index.html" title="Перейти на головну сторінку">🎓 Розумники</a>
         </h1>
-        <nav>
-            <button type="button" onclick="goTo('index.html')">Головна</button>
-            <button type="button" onclick="goTo('courses.html')">Навчальні матеріали</button>
-            <button type="button" onclick="goTo('feedback.html')">Зворотній зв’язок</button>
-        </nav>
-        <p>
+        <div class="auth">
+            <button type="button" onclick="goTo ('index.html')">Головна</button>
+            <button type="button" onclick="goTo ('courses.html')">Навчальні матеріали</button>
+            <button type="button" onclick="goTo ('feedback.html')">Зворотній зв'язок'</button>
+        </div>
+        <nav class="main-nav">
             <button type="button" onclick="openCabinet()">Перейти у власний кабінет</button>
             <button type="button" onclick="registerUser()">Зареєструватись</button>
-        </p>
-        <hr>
+        </nav>
     </header>
 
     <main>
         <h2>Наші курси</h2>
-        <article>
-            <img src="https://placehold.co/300x160/4a90e2/ffffff.png?text=Математика" width="300" height="160" alt="Заставка курсу: Математика">
-            <h3>Весела лічба</h3>
-            <p><strong>Уроки:</strong> Цифри, Додавання, Віднімання</p>
-            <p><strong>Тип завдань:</strong> Ігрові квести</p>
-        </article>
-        <hr>
-        <article>
-            <img src="https://placehold.co/300x160/50e3c2/ffffff.png?text=Читання" width="300" height="160" alt="Заставка курсу: Читання">
-            <h3>Абетка-розумниця</h3>
-            <p><strong>Уроки:</strong>голосні, Приголосні, Склади</p>
-            <p><strong>Тип завдань:</strong> Озвучені картки</p>
-        </article>
-        <hr>
-        <article>
-            <img src="https://placehold.co/300x160/f5a623/ffffff.png?text=Логіка" width="300" height="160" alt="Заставка курсу: Логіка">
-            <h3>Логічний світ</h3>
-            <p><strong>Уроки:</strong>Лабіринти, Порівняння, Фігури</p>
-            <p><strong>Тип завдань:</strong>Головоломки</p>
-        </article>
-        <hr>
-        <article>
-            <img src="https://placehold.co/300x160/e67e22/ffffff.png?text=Англійська" width="300" height="160" alt="Заставка курсу: Англійська">
-            <h3>English Kids</h3>
-            <p><strong>Уроки:</strong>Алфавіт, Кольори, Тваринки</p>
-            <p><strong>Тип завдань:</strong>Інтерактивні тести</p>
-        </article>
-        <hr>
+        <div class="courses-grid">
+            <article class="course-card">
+                <img src="https://placehold.co/300x160/4a90e2/ffffff.png?text=Математика" width="300" height="160" alt="Заставка курсу: Математика">
+                <h3>Весела лічба</h3>
+                <p><strong>Уроки:</strong> Цифри, Додавання, Віднімання</p>
+                <p><strong>Тип завдань:</strong> Ігрові квести</p>
+            </article>
+            <article class="course-card">
+                <img src="https://placehold.co/300x160/50e3c2/ffffff.png?text=Читання" width="300" height="160" alt="Заставка курсу: Читання">
+                <h3>Абетка-розумниця</h3>
+                <p><strong>Уроки:</strong>голосні, Приголосні, Склади</p>
+                <p><strong>Тип завдань:</strong> Озвучені картки</p>
+            </article>
+            <article class="course-card">
+                <img src="https://placehold.co/300x160/f5a623/ffffff.png?text=Логіка" width="300" height="160" alt="Заставка курсу: Логіка">
+                <h3>Логічний світ</h3>
+                <p><strong>Уроки:</strong>Лабіринти, Порівняння, Фігури</p>
+                <p><strong>Тип завдань:</strong>Головоломки</p>
+            </article>
+            <article class="course-card">
+                <img src="https://placehold.co/300x160/e67e22/ffffff.png?text=Англійська" width="300" height="160" alt="Заставка курсу: Англійська">
+                <h3>English Kids</h3>
+                <p><strong>Уроки:</strong>Алфавіт, Кольори, Тваринки</p>
+                <p><strong>Тип завдань:</strong>Інтерактивні тести</p>
+            </article>
+        </div>
 
-        <button type="button" onclick="goTo('index.html')"> Перейти на головну сторінку </button>
+        <p><button type="button" onclick="goTo('index.html')"> Перейти на головну сторінку </button></p>
     </main>
 
     <script src="script.js"></script>

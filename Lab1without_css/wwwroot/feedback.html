@@ -1,33 +1,41 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зворотній зв’язок — Розумники</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .feedback textarea {
+            width: 350px;
+            height: 100px;
+            max-width: 100%;
+            max-height: 150px;
+            resize: none;
+        }
+    </style>
 
 </head>
-<body bgcolor="#f4f7f6" text="#333333">
-    <header>
+<body class="feedback">
+    <header id="main-header">
         <h1 id="logo" title="Логотип порталу">
             <a href="index.html" title="Перейти на головну сторінку">🎓 Розумники</a>
         </h1>
-        <nav>
-            <button type="button" onclick="goTo('index.html')">Головна</button>
-            <button type="button" onclick="goTo('courses.html')">Навчальні матеріали</button>
-            <button type="button" onclick="goTo('feedback.html')">Зворотній зв’язок</button>
-        </nav>
-        <p>
+        <div class="auth">
+            <button type="button" onclick="goTo ('index.html')">Головна</button>
+            <button type="button" onclick="goTo ('courses.html')">Навчальні матеріали</button>
+            <button type="button" onclick="goTo ('feedback.html')">Зворотній зв'язок'</button>
+        </div>
+        <nav class="main-nav">
             <button type="button" onclick="openCabinet()">Перейти у власний кабінет</button>
             <button type="button" onclick="registerUser()">Зареєструватись</button>
-        </p>
-        <hr>
+        </nav>
     </header>
     <main>
         <h2>Зворотній зв’язок</h2>
 
-        <form onsubmit="submitForm(event)">
-            <fieldset>
+        <form class="feedback-form" onsubmit="submitForm(event)">
+            <fieldset class="personal">
                 <legend><strong>Персональна інформація</strong></legend>
                 <p>
                     <label for="parentName">Прізвище та ім’я батьків:</label><br>
@@ -48,24 +56,26 @@
                 </p>
             </fieldset>
 
-            <p>
-                <label for="purpose">Мета зворотнього зв'язку: '</label>
+            <div class="purpose">
+                <label for="purpose">Мета зворотнього зв'язку: </label>
                 <select id="purpose" required>
-                    <option value="">>--Оберіть звернення--<</option>
+                    <option value="">--Оберіть звернення--<</option>
                     <option value="cooperation">Співпраця</option>
                     <option value="complaint">Скарга</option>
                     <option value="proposal">Пропозиції</option>
                     <option value="error">Наявність помилки</option>
                 </select>
-            </p>
-            <p>
+            </div>
+            <div class="details">
                 <label for="details">Детально (до 300 символів):</label><br>
                 <textarea id="details" rows="6" cols="45" maxlength="300" required></textarea>
-            </p>
-            <p>
+            </div>
+            <div class="consent">
                 <label><input type="checkbox" required>Я даю згоду на обробку персональної інформації</label>
-            </p>
-            <p><button type="submit">Надіслати інформацію</button></p>
+            </div>
+            <div class="actions">
+                <button type="submit">Надіслати інформацію</button>
+            </div>
         </form>
     </main>
 
